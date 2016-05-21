@@ -2,7 +2,7 @@ package org.mechmng.dao;
 
 import org.mechmng.dao.domain.Department;
 
-public interface DepartmentMapper {
+public interface DepartmentDAO {
     int deleteByPrimaryKey(Long id);
 
     int insert(Department record);

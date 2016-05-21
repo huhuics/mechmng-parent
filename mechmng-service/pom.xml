@@ -15,8 +15,18 @@
 
 	<name>mechmng-service</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<dependencies>
+		<!-- mechmng相关jar包 -->
+		<dependency>
+			<groupId>com.fesc.mechmng</groupId>
+			<artifactId>mechmng-dao</artifactId>
+		</dependency>
+
+		<!-- mechmng end -->
+
+
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

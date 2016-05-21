@@ -1,12 +1,24 @@
 package org.mechmng.dao.domain;
 
 public class User {
+    /**
+     *  主键, user.id
+     */
     private Long id;
 
+    /**
+     *  姓名, user.name
+     */
     private String name;
 
+    /**
+     *  密码, user.password
+     */
     private String password;
 
+    /**
+     *  年龄, user.age
+     */
     private Integer age;
 
     public Long getId() {

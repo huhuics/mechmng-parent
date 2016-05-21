@@ -2,7 +2,7 @@ package org.mechmng.dao;
 
 import org.mechmng.dao.domain.User;
 
-public interface UserMapper {
+public interface UserDAO {
     int deleteByPrimaryKey(Long id);
 
     int insert(User record);

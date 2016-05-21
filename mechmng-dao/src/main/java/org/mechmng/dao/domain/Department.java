@@ -1,8 +1,14 @@
 package org.mechmng.dao.domain;
 
 public class Department {
+    /**
+     *  主键, department.id
+     */
     private Long id;
 
+    /**
+     *  部门名称, department.name
+     */
     private String name;
 
     public Long getId() {
