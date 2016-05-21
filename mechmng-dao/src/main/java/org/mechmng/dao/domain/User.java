@@ -1,25 +1,29 @@
 package org.mechmng.dao.domain;
 
-public class User {
+public class User extends BaseDomain {
+
+    /** uid */
+    private static final long serialVersionUID = -9175975400110980371L;
+
     /**
      *  主键, user.id
      */
-    private Long id;
+    private Long              id;
 
     /**
      *  姓名, user.name
      */
-    private String name;
+    private String            name;
 
     /**
      *  密码, user.password
      */
-    private String password;
+    private String            password;
 
     /**
      *  年龄, user.age
      */
-    private Integer age;
+    private Integer           age;
 
     public Long getId() {
         return id;

@@ -1,5 +1,7 @@
 package org.mechmng.dao;
 
+import java.util.List;
+
 import org.mechmng.dao.domain.User;
 
 public interface UserDAO {
@@ -14,4 +16,6 @@ public interface UserDAO {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    List<User> queryAll();
 }

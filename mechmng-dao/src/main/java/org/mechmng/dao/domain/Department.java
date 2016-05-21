@@ -1,15 +1,19 @@
 package org.mechmng.dao.domain;
 
-public class Department {
+public class Department extends BaseDomain {
+
+    /** uid */
+    private static final long serialVersionUID = 57979080771317777L;
+
     /**
      *  主键, department.id
      */
-    private Long id;
+    private Long              id;
 
     /**
      *  部门名称, department.name
      */
-    private String name;
+    private String            name;
 
     public Long getId() {
         return id;
