@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.mechmng.common.facade.dto.PageDTO;
 import org.mechmng.dao.domain.User;
 import org.mechmng.service.UserService;
 
@@ -33,5 +34,21 @@ public class UserServiceTest extends BaseTest {
         Assert.assertNotNull(userService);
         boolean ret = userService.deleteByPrimaryKey(59L);
         Assert.assertTrue(ret);
+    }
+
+    /**
+     * 测试分页查询User
+     */
+    @Test
+    public void testQueryUsersByPage() {
+        int pageNum = 1;
+        int pageSize = 10;
+        PageDTO<User> users = userService.getUsers(pageNum, pageSize);
+        Assert.assertNotNull(users);
+        Assert.assertNotNull(users.getData());
+        Assert.assertNotNull(users.getPageInfo());
+        Assert.assertEquals(users.getData().size(), 10);
+        Assert.assertEquals(users.getPageInfo().getPageNum(), pageNum);
+        Assert.assertEquals(users.getPageInfo().getPageSize(), pageSize);
     }
 }

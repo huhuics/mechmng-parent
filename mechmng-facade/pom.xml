@@ -18,6 +18,10 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
+	<dependency>
+		<groupId>com.fesc.mechmng</groupId>
+		<artifactId>mechmng-common</artifactId>
+	</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

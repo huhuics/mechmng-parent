@@ -4,6 +4,7 @@
  */
 package org.mechmng.service;
 
+import org.mechmng.common.facade.dto.PageDTO;
 import org.mechmng.dao.domain.User;
 
 /**
@@ -26,5 +27,13 @@ public interface UserService {
      * @return
      */
     boolean deleteByPrimaryKey(Long id);
+
+    /**
+     * 查询用户，带分页
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageDTO<User> getUsers(int pageNum, int pageSize);
 
 }
