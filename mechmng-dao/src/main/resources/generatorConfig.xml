@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration> 
+    <context id="default"  targetRuntime="MyBatis3" defaultModelType="flat">
+        <commentGenerator>  
+            <property name="suppressDate" value="true"/>  
+            <!-- 是否去除自动生成的注释 -->
+            <property name="suppressAllComments" value="true"/>  
+        </commentGenerator>  
+        <!-- 数据库连接信息 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/test" userId="root" password="huhui"/>  
+        <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>  
+        <!-- 生成领域对象的包名和位置 -->
+        <javaModelGenerator targetPackage="org.mechmng.dao.domain" targetProject="src/main/java">  
+            <property name="enableSubPackages" value="true"/>  
+            <property name="trimStrings" value="true"/>  
+        </javaModelGenerator>  
+        <!-- 生成mapping文件的包名和位置 -->
+        <sqlMapGenerator targetPackage="org.mechmng.dao.mapping" targetProject="src/main/java">  
+            <property name="enableSubPackages" value="true"/>  
+        </sqlMapGenerator>  
+        <!-- 生成DAO的包名和位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="org.mechmng.dao" targetProject="src/main/java">  
+            <property name="enableSubPackages" value="true"/>  
+        </javaClientGenerator>  
+        <!-- 要生成的表，tableName是数据库中的表名或者视图名，domainObjectName是实体类名 -->
+        <!-- <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="id" javaType="java.lang.Long" />
+		</table> -->
+		<!-- 生成所有表 -->
+		<table tableName="%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="id" javaType="java.lang.Long" />
+		</table>
+    </context>  
+</generatorConfiguration>
