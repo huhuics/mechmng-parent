@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.mechmng.common.facade.dto.PageDTO;
+import org.mechmng.common.facade.result.PageList;
 import org.mechmng.dao.domain.User;
 import org.mechmng.service.UserService;
 
@@ -43,7 +43,7 @@ public class UserServiceTest extends BaseTest {
     public void testQueryUsersByPage() {
         int pageNum = 1;
         int pageSize = 10;
-        PageDTO<User> users = userService.getUsers(pageNum, pageSize);
+        PageList<User> users = userService.getUsers(pageNum, pageSize);
         Assert.assertNotNull(users);
         Assert.assertNotNull(users.getData());
         Assert.assertNotNull(users.getPageInfo());

@@ -4,7 +4,7 @@
  */
 package org.mechmng.service;
 
-import org.mechmng.common.facade.dto.PageDTO;
+import org.mechmng.common.facade.result.PageList;
 import org.mechmng.dao.domain.User;
 
 /**
@@ -34,6 +34,6 @@ public interface UserService {
      * @param pageSize
      * @return
      */
-    PageDTO<User> getUsers(int pageNum, int pageSize);
+    PageList<User> getUsers(int pageNum, int pageSize);
 
 }

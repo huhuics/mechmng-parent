@@ -1,0 +1,77 @@
+package org.mechmng.biz.impl;
+
+import javax.annotation.Resource;
+
+import org.mechmng.biz.impl.convertor.UserConvertor;
+import org.mechmng.common.facade.result.PageList;
+import org.mechmng.common.facade.result.Result;
+import org.mechmng.common.util.AssertUtil;
+import org.mechmng.dao.domain.User;
+import org.mechmng.facade.api.UserFacade;
+import org.mechmng.facade.dto.PageDTO;
+import org.mechmng.facade.dto.UserDTO;
+import org.mechmng.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+/**
+ * UserFacade的实现类
+ * @author HuHui
+ * @version $Id: UserFacadeImpl.java, v 0.1 2016年5月22日 上午1:03:00 HuHui Exp $
+ */
+@Service
+@SuppressWarnings("unchecked")
+public class UserFacadeImpl implements UserFacade {
+
+    /** logger */
+    private static final Logger logger = LoggerFactory.getLogger(UserFacadeImpl.class);
+
+    @Resource
+    private UserService         userService;
+
+    @Override
+    public Result<UserDTO> selectByPrimaryKey(Long id) {
+        logger.info("selectByPrimaryKey收到查询参数:{}", id);
+        Result<UserDTO> result = new Result<UserDTO>();
+        try {
+            AssertUtil.assertNotNull(id, "查询参数id为空");
+            User user = userService.selectByPrimaryKey(id);
+            UserDTO userDTO = UserConvertor.convertor2UserDTO(user);
+
+            result.setResultObj(userDTO);
+            result.setSuccess(true);
+        } catch (Exception e) {
+            logger.error("查询用户失败, id={}", id, e);
+        }
+
+        return result;
+    }
+
+    @Override
+    public Result<PageDTO<UserDTO>> getUsers(int pageNum, int pageSize) {
+        logger.info("收到查询参数, pageNum={}, pageSize={}", pageNum, pageSize);
+
+        Result<PageDTO<UserDTO>> result = new Result<PageDTO<UserDTO>>();
+        try {
+            AssertUtil.assertNotNull(pageNum, "查询参数pageNum为空");
+            AssertUtil.assertNotNull(pageSize, "查询参数pageSize为空");
+
+            PageDTO<UserDTO> userDTOs = new PageDTO<UserDTO>();
+
+            PageList<User> users = userService.getUsers(pageNum, pageSize);
+
+            userDTOs.setPageInfo(users.getPageInfo());
+            userDTOs.setData(UserConvertor.convertor2UserDTOs(users.getData()));
+
+            result.setResultObj(userDTOs);
+            result.setSuccess(true);
+
+        } catch (Exception e) {
+            logger.error("查询用户失败, pageNum={1}, pageSize={2}", pageNum, pageSize, e);
+        }
+
+        return result;
+    }
+
+}

@@ -15,9 +15,42 @@
 
 	<name>mechmng-biz-impl</name>
 	<url>http://maven.apache.org</url>
-	<dependencies>
 
-		<!-- 导入JavaEE jar -->
+	<dependencies>
+		<dependency>
+			<groupId>com.fesc.mechmng</groupId>
+			<artifactId>mechmng-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fesc.mechmng</groupId>
+			<artifactId>mechmng-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fesc.mechmng</groupId>
+			<artifactId>mechmng-common</artifactId>
+		</dependency>
+
+		<!-- spring核心 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- 日志 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>

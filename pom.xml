@@ -44,6 +44,16 @@
 				<artifactId>mechmng-common</artifactId>
 				<version>${mechmng.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.fesc.mechmng</groupId>
+				<artifactId>mechmng-facade</artifactId>
+				<version>${mechmng.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fesc.mechmng</groupId>
+				<artifactId>mechmng-service</artifactId>
+				<version>${mechmng.version}</version>
+			</dependency>
 			<!-- mechmng end -->
 
 			<!-- spring核心 -->

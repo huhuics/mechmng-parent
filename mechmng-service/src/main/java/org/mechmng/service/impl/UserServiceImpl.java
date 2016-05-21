@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.mechmng.common.facade.dto.PageDTO;
+import org.mechmng.common.facade.result.PageList;
 import org.mechmng.common.util.AssertUtil;
 import org.mechmng.dao.UserDAO;
 import org.mechmng.dao.domain.User;
@@ -37,8 +37,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User selectByPrimaryKey(Long id) {
-        logger.info("selectByPrimaryKey收到查询条件:{}", id);
-        AssertUtil.assertNotNull(id);
+        logger.info("收到查询条件:{}", id);
+        AssertUtil.assertNotNull(id, "查询参数id为空");
         User user = userDao.selectByPrimaryKey(id);
         logger.info("查询结果:{}", user);
         return user;
@@ -46,29 +46,28 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteByPrimaryKey(Long id) {
-        logger.info("deleteByPrimaryKey收到删除条件:{}", id);
-        AssertUtil.assertNotNull(id);
+        logger.info("收到删除条件:{}", id);
+        AssertUtil.assertNotNull(id, "查询参数id为空");
         int ret = userDao.deleteByPrimaryKey(id);
         return ret > 0;
     }
 
     @Override
-    public PageDTO<User> getUsers(int pageNum, int pageSize) {
-        logger.info("getUsers收到查询参数, pageNum={}, pageSize={}", pageNum, pageSize);
+    public PageList<User> getUsers(int pageNum, int pageSize) {
+        logger.info("收到查询参数, pageNum={}, pageSize={}", pageNum, pageSize);
 
         AssertUtil.assertNotNull(pageNum, "查询参数pageNum为空");
         AssertUtil.assertNotNull(pageSize, "查询参数pageSize为空");
 
-        PageDTO<User> pageDTO = new PageDTO<User>();
+        PageList<User> pageList = new PageList<User>();
 
         PageHelper.startPage(pageNum, pageSize);
         List<User> users = userDao.queryAll();
         PageInfo<User> pageInfo = new PageInfo<User>(users);
 
-        pageDTO.setData(users);
-        pageDTO.setPageInfo(pageInfo);
+        pageList.setData(users);
+        pageList.setPageInfo(pageInfo);
 
-        return pageDTO;
+        return pageList;
     }
-
 }
