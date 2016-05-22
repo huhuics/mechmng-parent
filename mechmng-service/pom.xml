@@ -121,6 +121,12 @@
 		</dependency>
 		<!-- pagehelper end -->
 
+		<!-- Apache ActiveMQ -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-core</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
