@@ -1,6 +1,7 @@
 package org.mechmng.biz.impl;
 
 import javax.annotation.Resource;
+import javax.jws.WebService;
 
 import org.mechmng.biz.impl.convertor.UserConvertor;
 import org.mechmng.common.facade.result.PageList;
@@ -22,6 +23,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @SuppressWarnings("unchecked")
+@WebService(endpointInterface = "org.mechmng.facade.api.UserFacade")
 public class UserFacadeImpl implements UserFacade {
 
     /** logger */
@@ -32,7 +34,7 @@ public class UserFacadeImpl implements UserFacade {
 
     @Override
     public Result<UserDTO> selectByPrimaryKey(Long id) {
-        logger.info("selectByPrimaryKey收到查询参数:{}", id);
+        logger.info("收到查询参数:{}", id);
         Result<UserDTO> result = new Result<UserDTO>();
         try {
             AssertUtil.assertNotNull(id, "查询参数id为空");

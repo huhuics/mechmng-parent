@@ -4,6 +4,8 @@
  */
 package org.mechmng.facade.api;
 
+import javax.jws.WebService;
+
 import org.mechmng.common.facade.result.Result;
 import org.mechmng.facade.dto.PageDTO;
 import org.mechmng.facade.dto.UserDTO;
@@ -13,6 +15,7 @@ import org.mechmng.facade.dto.UserDTO;
  * @author HuHui
  * @version $Id: UserFacade.java, v 0.1 2016年5月21日 下午11:30:02 HuHui Exp $
  */
+@WebService
 public interface UserFacade {
 
     /**
