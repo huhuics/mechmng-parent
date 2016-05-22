@@ -74,6 +74,23 @@
 		</dependency>
 		<!-- end Spring -->
 
+		<!-- Apache CXF -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+		</dependency>
+		<!-- CXF end -->
+
+		<!-- 日志 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+
 		<!-- 导入JavaEE jar -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -102,6 +119,7 @@
 				<version>2.1</version>
 				<configuration>
 					<path>/mechmng-web</path>
+					<port>8081</port>
 				</configuration>
 			</plugin>
 		</plugins>
