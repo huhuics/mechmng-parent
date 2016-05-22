@@ -26,7 +26,6 @@
 			<groupId>com.fesc.mechmng</groupId>
 			<artifactId>mechmng-common</artifactId>
 		</dependency>
-
 		<!-- mechmng end -->
 
 		<!-- spring核心 -->
