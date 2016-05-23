@@ -4,7 +4,6 @@
  */
 package org.mechmng.service.mq;
 
-import org.mechmng.dao.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,11 +18,7 @@ public class MessageReceiverServiceImpl implements MessageReceiverService {
 
     @Override
     public void getMessage(Object obj) {
-        logger.info("mechmng-biz-impl接收到消息");
-        if (obj instanceof User) {
-            User user = (User) obj;
-            logger.info("消息体为user:{}", user);
-        }
+        logger.info("mechmng-service接收到消息,消息体obj={}", obj);
     }
 
 }
