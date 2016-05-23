@@ -39,7 +39,7 @@ public class UserFacadeImpl implements UserFacade {
         try {
             AssertUtil.assertNotNull(id, "查询参数id为空");
             User user = userService.selectByPrimaryKey(id);
-            UserDTO userDTO = UserConvertor.convertor2UserDTO(user);
+            UserDTO userDTO = UserConvertor.convert2UserDTO(user);
 
             result.setResultObj(userDTO);
             result.setSuccess(true);
@@ -64,7 +64,7 @@ public class UserFacadeImpl implements UserFacade {
             PageList<User> users = userService.getUsers(pageNum, pageSize);
 
             userDTOs.setPageInfo(users.getPageInfo());
-            userDTOs.setData(UserConvertor.convertor2UserDTOs(users.getData()));
+            userDTOs.setData(UserConvertor.convert2UserDTOs(users.getData()));
 
             result.setResultObj(userDTOs);
             result.setSuccess(true);

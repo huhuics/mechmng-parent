@@ -10,8 +10,8 @@ package org.mechmng.biz.impl.mq;
  * @author HuHui
  * @version $Id: MessageReceiverService.java, v 0.1 2016年5月22日 下午11:14:15 HuHui Exp $
  */
-public interface MessageReceiverService {
+public interface MessageReceiverServiceClient {
 
-    public void getMessage(Object obj);
+    void getMessage(Object obj);
 
 }

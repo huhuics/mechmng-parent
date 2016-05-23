@@ -67,6 +67,12 @@
 			<artifactId>cxf-rt-transports-http</artifactId>
 		</dependency>
 		<!-- CXF end -->
+		
+		<!-- druid数据源 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>

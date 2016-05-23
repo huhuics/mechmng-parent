@@ -18,12 +18,25 @@ import org.mechmng.facade.dto.UserDTO;
  */
 public class UserConvertor {
 
+    public static User convert2User(UserDTO userDTO) {
+        if (userDTO == null) {
+            return null;
+        }
+        User user = new User();
+        user.setId(userDTO.getId());
+        user.setName(userDTO.getName());
+        user.setPassword(userDTO.getPassword());
+        user.setAge(userDTO.getAge());
+
+        return user;
+    }
+
     /**
      * 将User转换为UserDTO
      * @param user
      * @return
      */
-    public static UserDTO convertor2UserDTO(User user) {
+    public static UserDTO convert2UserDTO(User user) {
         if (user == null) {
             return null;
         }
@@ -37,14 +50,14 @@ public class UserConvertor {
         return userDTO;
     }
 
-    public static List<UserDTO> convertor2UserDTOs(List<User> users) {
+    public static List<UserDTO> convert2UserDTOs(List<User> users) {
         if (CollectionUtils.isEmpty(users)) {
             return null;
         }
 
         List<UserDTO> userDTOs = new ArrayList<UserDTO>();
         for (User user : users) {
-            UserDTO userDTO = convertor2UserDTO(user);
+            UserDTO userDTO = convert2UserDTO(user);
             userDTOs.add(userDTO);
         }
 

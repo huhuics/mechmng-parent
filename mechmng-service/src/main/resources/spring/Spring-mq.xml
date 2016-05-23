@@ -32,7 +32,7 @@
 	
 	<!-- 配置异步方式接收消息 -->
 	
-	<bean id="messageReceiverService" class="org.mechmng.biz.impl.mq.MessageReceiverServiceImpl" />
+	<bean id="messageReceiverService" class="org.mechmng.service.mq.MessageReceiverServiceImpl" />
 	
 	<jms:listener-container connection-factory="connectionFactory">
 		<jms:listener destination="mechmng.queue" ref="messageReceiverService" method="getMessage"/>

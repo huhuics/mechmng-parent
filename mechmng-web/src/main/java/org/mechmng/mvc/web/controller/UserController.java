@@ -60,7 +60,7 @@ public class UserController {
             map.put("user", userDTO);
 
             //向mechmng-biz-impl发送消息
-            logger.info("开始发送消息,内容:", userDTO);
+            logger.info("开始发送消息,内容:{}", userDTO);
             jmsTemplate.send(new MessageCreator() {
                 @Override
                 public Message createMessage(Session session) throws JMSException {

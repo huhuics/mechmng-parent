@@ -140,9 +140,9 @@
 
 			<!-- 数据源 -->
 			<dependency>
-				<groupId>commons-dbcp</groupId>
-				<artifactId>commons-dbcp</artifactId>
-				<version>1.4</version>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>1.0.20</version>
 			</dependency>
 
 			<!-- 日志 -->
