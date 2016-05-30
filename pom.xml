@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -9,6 +10,8 @@
 
 	<name>mechmng-parent</name>
 	<url>http://maven.apache.org</url>
+	
+	
 
 	<modules>
 		<module>mechmng-dao</module>
@@ -18,6 +21,7 @@
 		<module>mechmng-service</module>
 		<module>mechmng-web</module>
 		<module>mechmng-mng</module>
+		<module>mechmng-test</module>
 	</modules>
 
 	<properties>
@@ -33,7 +37,7 @@
 	<dependencyManagement>
 		<dependencies>
 
-			<!-- mechmng相关jar包 -->
+			<!-- mechmng相关jar�? -->
 			<dependency>
 				<groupId>com.fesc.mechmng</groupId>
 				<artifactId>mechmng-dao</artifactId>
@@ -131,14 +135,14 @@
 			</dependency>
 			<!-- end mybatis -->
 
-			<!-- 数据库链接 -->
+			<!-- 数据库链�? -->
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 				<version>5.1.30</version>
 			</dependency>
 
-			<!-- 数据源 -->
+			<!-- 数据�? -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
@@ -160,7 +164,7 @@
 				<scope>provided</scope>
 			</dependency>
 
-			<!-- 工具类 -->
+			<!-- 工具�? -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
