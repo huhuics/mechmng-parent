@@ -5,6 +5,17 @@
 	version="3.0">
 	<display-name>Archetype Created Web Application</display-name>
 
+	<!-- Spring配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:Spring-config-biz.xml</param-value>
+	</context-param>
+
+	<!-- Spring监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
 	<!-- Druid Config -->
 	<filter>
 		<filter-name>DruidWebStatFilter</filter-name>

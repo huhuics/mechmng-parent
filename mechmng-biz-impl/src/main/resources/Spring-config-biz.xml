@@ -8,7 +8,7 @@
 
 	<!-- 引入mechmng-service中的spring配置文件 -->
 	<import resource="classpath:Spring-config.xml" />
-	
+
 	<import resource="spring/Spring-*.xml" />
 
 </beans>
