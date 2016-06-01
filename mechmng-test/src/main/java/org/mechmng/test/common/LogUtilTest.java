@@ -15,9 +15,9 @@ import org.slf4j.LoggerFactory;
  * @author HuHui
  * @version $Id: TestLogUtil.java, v 0.1 2016年6月1日 下午9:26:19 HuHui Exp $
  */
-public class TestLogUtil {
+public class LogUtilTest {
 
-    private static final Logger logger = LoggerFactory.getLogger(TestLogUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(LogUtilTest.class);
 
     @Test
     public void testErrorLog() {

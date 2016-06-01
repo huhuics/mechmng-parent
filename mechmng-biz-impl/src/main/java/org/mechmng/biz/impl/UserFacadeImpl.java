@@ -7,6 +7,8 @@ import org.mechmng.biz.impl.convertor.UserConvertor;
 import org.mechmng.common.facade.result.PageList;
 import org.mechmng.common.facade.result.Result;
 import org.mechmng.common.util.AssertUtil;
+import org.mechmng.common.util.LogUtil;
+import org.mechmng.common.util.Exception.MechException;
 import org.mechmng.dao.domain.User;
 import org.mechmng.facade.api.UserFacade;
 import org.mechmng.facade.dto.PageDTO;
@@ -34,17 +36,17 @@ public class UserFacadeImpl implements UserFacade {
 
     @Override
     public Result<UserDTO> selectByPrimaryKey(Long id) {
-        logger.info("收到查询参数:{}", id);
+        LogUtil.info(logger, "收到查询参数:{0}", id);
         Result<UserDTO> result = new Result<UserDTO>();
         try {
             AssertUtil.assertNotNull(id, "查询参数id为空");
             User user = userService.selectByPrimaryKey(id);
             UserDTO userDTO = UserConvertor.convert2UserDTO(user);
-
             result.setResultObj(userDTO);
             result.setSuccess(true);
         } catch (Exception e) {
-            logger.error("查询用户失败, id={}", id, e);
+            LogUtil.error(e, logger, "查询用户失败, id={0}", id);
+            throw new MechException("查询用户失败", e);
         }
 
         return result;
@@ -52,8 +54,7 @@ public class UserFacadeImpl implements UserFacade {
 
     @Override
     public Result<PageDTO<UserDTO>> getUsers(int pageNum, int pageSize) {
-        logger.info("收到查询参数, pageNum={}, pageSize={}", pageNum, pageSize);
-
+        LogUtil.info(logger, "收到查询参数, pageNum={0}, pageSize={1}", pageNum, pageSize);
         Result<PageDTO<UserDTO>> result = new Result<PageDTO<UserDTO>>();
         try {
             AssertUtil.assertNotNull(pageNum, "查询参数pageNum为空");
@@ -70,7 +71,8 @@ public class UserFacadeImpl implements UserFacade {
             result.setSuccess(true);
 
         } catch (Exception e) {
-            logger.error("查询用户失败, pageNum={1}, pageSize={2}", pageNum, pageSize, e);
+            LogUtil.error(e, logger, "查询用户失败, pageNum={0}, pageSize={1}", pageNum, pageSize);
+            throw new MechException("查询用户失败", e);
         }
 
         return result;

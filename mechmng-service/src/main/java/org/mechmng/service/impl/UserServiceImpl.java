@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 
 import org.mechmng.common.facade.result.PageList;
 import org.mechmng.common.util.AssertUtil;
+import org.mechmng.common.util.LogUtil;
 import org.mechmng.dao.UserDAO;
 import org.mechmng.dao.domain.User;
 import org.mechmng.service.UserService;
@@ -37,16 +38,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User selectByPrimaryKey(Long id) {
-        logger.info("收到查询条件:{}", id);
+        LogUtil.info(logger, "收到查询条件:{0}", id);
+
         AssertUtil.assertNotNull(id, "查询参数id为空");
         User user = userDao.selectByPrimaryKey(id);
-        logger.info("查询结果:{}", user);
+        LogUtil.info(logger, "查询结果:{0}", user);
         return user;
     }
 
     @Override
     public boolean deleteByPrimaryKey(Long id) {
-        logger.info("收到删除条件:{}", id);
+        LogUtil.info(logger, "收到删除条件:{}", id);
+
         AssertUtil.assertNotNull(id, "查询参数id为空");
         int ret = userDao.deleteByPrimaryKey(id);
         return ret > 0;
@@ -54,7 +57,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public PageList<User> getUsers(int pageNum, int pageSize) {
-        logger.info("收到查询参数, pageNum={}, pageSize={}", pageNum, pageSize);
+
+        LogUtil.info(logger, "收到查询参数, pageNum={0}, pageSize={1}", pageNum, pageSize);
 
         AssertUtil.assertNotNull(pageNum, "查询参数pageNum为空");
         AssertUtil.assertNotNull(pageSize, "查询参数pageSize为空");

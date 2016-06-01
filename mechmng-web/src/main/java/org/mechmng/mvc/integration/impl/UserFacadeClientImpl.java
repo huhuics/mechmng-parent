@@ -7,6 +7,7 @@ package org.mechmng.mvc.integration.impl;
 import javax.annotation.Resource;
 
 import org.mechmng.common.facade.result.Result;
+import org.mechmng.common.util.LogUtil;
 import org.mechmng.facade.api.UserFacade;
 import org.mechmng.facade.dto.PageDTO;
 import org.mechmng.facade.dto.UserDTO;
@@ -33,14 +34,12 @@ public class UserFacadeClientImpl implements UserFacadeClient {
      */
     @Override
     public Result<UserDTO> selectUserById(Long id) {
-        logger.info("收到查询用户参数,id={}", id);
+        LogUtil.info(logger, "收到查询用户参数,id={0}", id);
         Result<UserDTO> result = new Result<UserDTO>();
         try {
             result = userFacade.selectByPrimaryKey(id);
         } catch (Exception e) {
-            logger.error("用户查询异常,id={}", id, e);
-            //TODO
-            //抛出自定义异常
+            LogUtil.error(e, logger, "用户查询异常,id={0}", id);
         }
         return result;
     }
@@ -50,12 +49,12 @@ public class UserFacadeClientImpl implements UserFacadeClient {
      */
     @Override
     public Result<PageDTO<UserDTO>> getUsers(int pageNum, int pageSize) {
-        logger.info("收到查询参数, pageNum={}, pageSize={}", pageNum, pageSize);
+        LogUtil.info(logger, "收到查询参数, pageNum={0}, pageSize={1}", pageNum, pageSize);
         Result<PageDTO<UserDTO>> result = new Result<PageDTO<UserDTO>>();
         try {
             result = userFacade.getUsers(pageNum, pageSize);
         } catch (Exception e) {
-            logger.error("查询用户失败, pageNum={1}, pageSize={2}", pageNum, pageSize, e);
+            LogUtil.error(e, logger, "查询用户失败, pageNum={0}, pageSize={1}", pageNum, pageSize);
         }
         return result;
     }

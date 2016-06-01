@@ -4,6 +4,7 @@
  */
 package org.mechmng.service.mq;
 
+import org.mechmng.common.util.LogUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +19,7 @@ public class MessageReceiverServiceImpl implements MessageReceiverService {
 
     @Override
     public void getMessage(Object obj) {
-        logger.info("mechmng-service接收到消息,消息体obj={}", obj);
+        LogUtil.info(logger, "mechmng-service接收到消息,消息体obj={0}", obj);
     }
 
 }
