@@ -67,11 +67,17 @@
 			<artifactId>cxf-rt-transports-http</artifactId>
 		</dependency>
 		<!-- CXF end -->
-		
+
 		<!-- druid数据源 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
+		</dependency>
+
+		<!-- Quartz -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
 		</dependency>
 
 		<dependency>

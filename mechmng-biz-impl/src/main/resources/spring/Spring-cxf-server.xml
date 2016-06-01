@@ -6,7 +6,7 @@
 							http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 	
 	<!-- 引入mechmng-service中的spring配置文件 -->
-	<import resource="classpath:Spring-config.xml" />
+	<!-- <import resource="classpath:Spring-config.xml" /> -->
 	
 	<!-- cxf配置文件 -->
 	<import resource="classpath:META-INF/cxf/cxf.xml"/>

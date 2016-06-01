@@ -10,8 +10,8 @@
 
 	<name>mechmng-parent</name>
 	<url>http://maven.apache.org</url>
-	
-	
+
+
 
 	<modules>
 		<module>mechmng-dao</module>
@@ -215,6 +215,13 @@
 				<groupId>org.apache.activemq</groupId>
 				<artifactId>activemq-core</artifactId>
 				<version>5.7.0</version>
+			</dependency>
+
+			<!-- Quartz -->
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>2.2.1</version>
 			</dependency>
 
 			<dependency>
