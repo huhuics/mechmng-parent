@@ -6,7 +6,7 @@
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-	<bean id="datePrinter" class="org.mechmng.service.quartz.schedule.DatePrinter"/>
+	<bean id="datePrinter" class="org.mechmng.biz.impl.quartz.schedule.DatePrinter"/>
 	
 	<!-- 配置任务 -->
 	<bean id="datePrinterDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">

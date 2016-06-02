@@ -53,7 +53,7 @@
 		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
 		<init-param>
 			<param-name>config-location</param-name>
-			<param-value>classpath:Spring-config-biz.xml</param-value>
+			<param-value>classpath:spring/Spring-cxf-server.xml</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

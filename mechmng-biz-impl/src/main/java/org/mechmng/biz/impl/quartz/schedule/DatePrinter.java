@@ -2,7 +2,7 @@
  * Beijing Jiaotong University
  * Copyright (c) 1896-2016 All Rights Reserved.
  */
-package org.mechmng.service.quartz.schedule;
+package org.mechmng.biz.impl.quartz.schedule;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
