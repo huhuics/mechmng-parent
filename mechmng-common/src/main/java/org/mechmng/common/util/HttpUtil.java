@@ -10,7 +10,6 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
-import org.mechmng.common.util.Exception.MechException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,7 +39,6 @@ public class HttpUtil {
             result = getMethod.getResponseBodyAsString();
         } catch (Exception e) {
             LogUtil.error(e, logger, "Http调用发送异常, url={0}", url);
-            throw new MechException("Http调用发送异常");
         } finally {
             getMethod.releaseConnection();
         }
@@ -68,7 +66,6 @@ public class HttpUtil {
             result = postMethod.getResponseBodyAsString();
         } catch (Exception e) {
             LogUtil.error(e, logger, "Http调用发送异常, url={0}", url);
-            throw new MechException("Http调用发送异常");
         } finally {
             postMethod.releaseConnection();
         }

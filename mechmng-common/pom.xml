@@ -38,6 +38,11 @@
 			<artifactId>commons-httpclient</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+		</dependency>
+
 		<!-- 日志 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>

@@ -217,7 +217,7 @@
 				<version>2.2.1</version>
 			</dependency>
 
-			<!-- 工具类 -->
+			<!-- tools-->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
@@ -229,6 +229,13 @@
 				<artifactId>commons-httpclient</artifactId>
 				<version>3.1</version>
 			</dependency>
+
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			<!-- tools end -->
 
 			<dependency>
 				<groupId>junit</groupId>
