@@ -37,7 +37,7 @@
 	<dependencyManagement>
 		<dependencies>
 
-			<!-- mechmng相关jar�? -->
+			<!-- mechmng相关jar? -->
 			<dependency>
 				<groupId>com.fesc.mechmng</groupId>
 				<artifactId>mechmng-dao</artifactId>
@@ -135,14 +135,14 @@
 			</dependency>
 			<!-- end mybatis -->
 
-			<!-- 数据库链�? -->
+			<!-- 数据库连接 -->
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 				<version>5.1.30</version>
 			</dependency>
 
-			<!-- 数据�? -->
+			<!-- 数据库连接池 -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
@@ -162,13 +162,6 @@
 				<artifactId>javax.servlet-api</artifactId>
 				<version>3.1.0</version>
 				<scope>provided</scope>
-			</dependency>
-
-			<!-- 工具�? -->
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>3.4</version>
 			</dependency>
 
 			<dependency>
@@ -222,6 +215,19 @@
 				<groupId>org.quartz-scheduler</groupId>
 				<artifactId>quartz</artifactId>
 				<version>2.2.1</version>
+			</dependency>
+
+			<!-- 工具类 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.4</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>3.1</version>
 			</dependency>
 
 			<dependency>
