@@ -6,7 +6,15 @@
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context-4.0.xsd">
                         
-	<bean id="departmentFacade" class="org.mechmng.biz.impl.DepartmentFacadeImpl" />
+    <!-- 需要发布的bean都在此定义 -->
+    
+   <!--  <bean id="departmentFacade" class="org.mechmng.biz.impl.DepartmentFacadeImpl" />
+	
+	<bean id="userFacade" class="org.mechmng.biz.impl.UserFacadeImpl"></bean>   -->  
+                    
+    <!-- 引入mechmng-service中的spring配置文件 -->
+	<import resource="classpath:Spring-config.xml" />
+	
 	<import resource="spring/Spring-*.xml" />
 
 </beans>

@@ -1,7 +1,6 @@
 package org.mechmng.biz.impl;
 
 import javax.annotation.Resource;
-import javax.jws.WebService;
 
 import org.mechmng.biz.impl.convertor.UserConvertor;
 import org.mechmng.common.facade.result.PageList;
@@ -25,7 +24,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @SuppressWarnings("unchecked")
-@WebService(endpointInterface = "org.mechmng.facade.api.UserFacade")
 public class UserFacadeImpl implements UserFacade {
 
     /** logger */

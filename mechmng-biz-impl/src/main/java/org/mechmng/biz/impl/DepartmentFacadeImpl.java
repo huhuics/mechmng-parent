@@ -17,12 +17,14 @@ import org.mechmng.facade.dto.DepartmentDTO;
 import org.mechmng.service.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 /**
  * 
  * @author HuHui
  * @version $Id: DepartmentFacadeImpl.java, v 0.1 2016年6月7日 下午8:14:36 HuHui Exp $
  */
+@Service
 public class DepartmentFacadeImpl implements DepartmentFacade {
 
     private static final Logger logger = LoggerFactory.getLogger(DepartmentFacadeImpl.class);

@@ -57,17 +57,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Apache CXF -->
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-transports-http</artifactId>
-		</dependency>
-		<!-- CXF end -->
-
 		<!-- druid数据源 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>

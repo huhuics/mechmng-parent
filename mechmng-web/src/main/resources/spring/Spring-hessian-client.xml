@@ -11,4 +11,9 @@
 		<property name="serviceInterface" value="org.mechmng.facade.api.DepartmentFacade" />
 	</bean>
 	
+	<bean id="userFacade" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/mechmng-biz-impl/hessian/userFacade" />
+		<property name="serviceInterface" value="org.mechmng.facade.api.UserFacade" />
+	</bean>
+	
 </beans>
