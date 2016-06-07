@@ -17,14 +17,12 @@ import org.mechmng.facade.dto.DepartmentDTO;
 import org.mechmng.service.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
 /**
  * 
  * @author HuHui
  * @version $Id: DepartmentFacadeImpl.java, v 0.1 2016年6月7日 下午8:14:36 HuHui Exp $
  */
-@Service
 public class DepartmentFacadeImpl implements DepartmentFacade {
 
     private static final Logger logger = LoggerFactory.getLogger(DepartmentFacadeImpl.class);
@@ -39,13 +37,15 @@ public class DepartmentFacadeImpl implements DepartmentFacade {
         Result<DepartmentDTO> result = new Result<DepartmentDTO>();
         try {
             AssertUtil.assertNotNull(id, "查询参数id为空");
-            Department department = departmentService.selectByPrimaryKey(id);
+            Department department = null;
+            department = departmentService.selectByPrimaryKey(id);
+
             DepartmentDTO departmentDTO = DepartmentConvertor.convert2DepartmentDTO(department);
             result.setResultObj(departmentDTO);
             result.setSuccess(true);
         } catch (Exception e) {
             LogUtil.error(e, logger, "查询Department异常,id={0}", id);
-            throw new MechException("查询Department异常");
+            throw new MechException("查询Department异常", e);
         }
         return result;
     }

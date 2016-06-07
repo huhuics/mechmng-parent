@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @version $Id: BaseTest.java, v 0.1 2016年5月22日 上午1:54:34 HuHui Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:Spring-config.xml" })
+@ContextConfiguration(locations = { "classpath:Spring-config-biz.xml" })
 public class BaseTest {
 
 }
