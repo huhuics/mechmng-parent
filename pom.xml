@@ -217,7 +217,15 @@
 				<version>2.2.1</version>
 			</dependency>
 
-			<!-- tools-->
+			<!-- Hessian -->
+			<dependency>
+				<groupId>com.caucho</groupId>
+				<artifactId>hessian</artifactId>
+				<version>4.0.38</version>
+			</dependency>
+
+
+			<!-- tools -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>

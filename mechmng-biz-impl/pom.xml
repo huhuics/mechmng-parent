@@ -80,6 +80,12 @@
 			<artifactId>quartz</artifactId>
 		</dependency>
 
+		<!-- Hessian -->
+		<dependency>
+			<groupId>com.caucho</groupId>
+			<artifactId>hessian</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
