@@ -43,6 +43,11 @@
 			<artifactId>dom4j</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+
 		<!-- 日志 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>

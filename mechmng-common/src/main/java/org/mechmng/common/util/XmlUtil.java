@@ -29,7 +29,8 @@ public class XmlUtil {
     }
 
     /**
-     * 解析XML并将其节点元素存入Map中返回
+     * 解析XML并将其节点元素存入Map中返回<br>
+     * 注意:无法递归解析xml,即有子节点的xml将无法解析
      * @param pStrXml 待解析的XML字符串
      * @return
      */
