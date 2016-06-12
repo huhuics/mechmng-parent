@@ -32,8 +32,12 @@
 			<columnOverride column="id" javaType="java.lang.Long" />
 		</table> -->
 		<!-- 生成所有表 -->
-		<table tableName="%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+		<!-- <table tableName="%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 			<columnOverride column="id" javaType="java.lang.Long" />
+		</table> -->
+		<table tableName="goods" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="id" javaType="java.lang.Long" />
+			<columnOverride column="price" javaType="org.mechmng.common.util.Money"></columnOverride>
 		</table>
     </context>  
 </generatorConfiguration>

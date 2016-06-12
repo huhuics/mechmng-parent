@@ -2,6 +2,12 @@
  <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+	<!-- 注册typeHandler, 处理表示Money的字段 -->
+	<typeHandlers>
+		<typeHandler handler="org.mechmng.common.typehandler.MoneyTypeHandler" />
+	</typeHandlers>
+
 	<plugins>
 		<!-- 分页查询插件 -->
 		<!-- com.github.pagehelper为PageHelper类所在包名 -->
@@ -34,4 +40,5 @@
 			<property name="returnPageInfo" value="none" />
 		</plugin>
 	</plugins>
+
 </configuration>
