@@ -4,6 +4,7 @@
  */
 package org.mechmng.service;
 
+import org.mechmng.common.facade.result.PageList;
 import org.mechmng.dao.domain.Goods;
 
 /**
@@ -33,5 +34,13 @@ public interface GoodsService {
      * @return
      */
     int updateById(Goods goods);
+
+    /**
+     * 查询商品，带分页
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageList<Goods> getGoods(int pageNum, int pageSize);
 
 }

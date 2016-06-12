@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.mechmng.common.facade.result.PageList;
 import org.mechmng.common.util.Money;
 import org.mechmng.dao.domain.Goods;
 import org.mechmng.service.GoodsService;
@@ -48,6 +49,22 @@ public class GoodsServiceTest extends BaseTest {
         goods.setPrice(new Money(1, 60));
         int count = goodsService.updateById(goods);
         Assert.assertTrue(count > 0);
+    }
+
+    /**
+     * 测试分页查询User
+     */
+    @Test
+    public void testQueryGoodsByPage() {
+        int pageNum = 1;
+        int pageSize = 10;
+        PageList<Goods> goods = goodsService.getGoods(pageNum, pageSize);
+        Assert.assertNotNull(goods);
+        Assert.assertNotNull(goods.getData());
+        Assert.assertNotNull(goods.getPageInfo());
+        Assert.assertEquals(goods.getData().size(), 10);
+        Assert.assertEquals(goods.getPageInfo().getPageNum(), pageNum);
+        Assert.assertEquals(goods.getPageInfo().getPageSize(), pageSize);
     }
 
 }

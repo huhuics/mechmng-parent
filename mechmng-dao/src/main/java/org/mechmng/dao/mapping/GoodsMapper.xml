@@ -68,4 +68,9 @@
       price = #{price,jdbcType=BIGINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <!-- 查询所有 -->
+  <select id="queryAll" resultMap="BaseResultMap">
+  	select <include refid="Base_Column_List" /> from goods
+  </select>
 </mapper>

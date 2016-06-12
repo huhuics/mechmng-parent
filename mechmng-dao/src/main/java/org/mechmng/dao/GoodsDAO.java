@@ -1,5 +1,7 @@
 package org.mechmng.dao;
 
+import java.util.List;
+
 import org.mechmng.dao.domain.Goods;
 
 public interface GoodsDAO {
@@ -14,4 +16,6 @@ public interface GoodsDAO {
     int updateByPrimaryKeySelective(Goods record);
 
     int updateByPrimaryKey(Goods record);
+
+    List<Goods> queryAll();
 }
