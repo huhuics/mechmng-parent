@@ -17,7 +17,13 @@
 		<property name="locations">
 			<list>
 				<value>classpath:config/mq.properties</value>
+				<value>classpath:config/dubbo.properties</value>
 			</list>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="dubbo.application.name">mechmng-web</prop>
+			</props>
 		</property>
 	</bean>
 
