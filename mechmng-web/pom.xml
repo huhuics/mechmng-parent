@@ -74,12 +74,6 @@
 		</dependency>
 		<!-- end Spring -->
 
-		<!-- Hessian -->
-		<dependency>
-			<groupId>com.caucho</groupId>
-			<artifactId>hessian</artifactId>
-		</dependency>
-
 		<!-- 日志 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>

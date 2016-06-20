@@ -28,8 +28,6 @@
 	<properties>
 		<!-- Spring版本 -->
 		<spring.version>4.0.2.RELEASE</spring.version>
-		<!-- Apache CXF版本 -->
-		<cxf.version>3.0.5</cxf.version>
 		<!-- mechmng版本 -->
 		<mechmng.version>0.0.1-SNAPSHOT</mechmng.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -197,13 +195,6 @@
 				<groupId>org.quartz-scheduler</groupId>
 				<artifactId>quartz</artifactId>
 				<version>2.2.1</version>
-			</dependency>
-
-			<!-- Hessian -->
-			<dependency>
-				<groupId>com.caucho</groupId>
-				<artifactId>hessian</artifactId>
-				<version>4.0.38</version>
 			</dependency>
 
 			<!-- dubbo -->

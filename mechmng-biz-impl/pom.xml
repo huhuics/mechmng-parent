@@ -69,12 +69,6 @@
 			<artifactId>quartz</artifactId>
 		</dependency>
 
-		<!-- Hessian -->
-		<dependency>
-			<groupId>com.caucho</groupId>
-			<artifactId>hessian</artifactId>
-		</dependency>
-
 		<!-- dubbo -->
 		<dependency>
 			<groupId>com.alibaba</groupId>

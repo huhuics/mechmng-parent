@@ -20,4 +20,6 @@
 		
 	<dubbo:reference interface="org.mechmng.facade.api.DepartmentFacade" id="departmentFacade" />
 	
+	<dubbo:reference interface="org.mechmng.facade.api.UserFacade" id="userFacade" />
+	
 </beans>

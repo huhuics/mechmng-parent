@@ -47,22 +47,6 @@
 	</servlet-mapping>
 	<!-- end Druid -->
 
-	<!-- Hessian servlet -->
-	<servlet>
-		<servlet-name>Hessian</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring/Spring-hessian-server.xml</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Hessian</servlet-name>
-		<url-pattern>/hessian/*</url-pattern>
-	</servlet-mapping>
-	<!-- end Hessian -->
-
 	<welcome-file-list>
 		<welcome-file>/index.jsp</welcome-file>
 	</welcome-file-list>

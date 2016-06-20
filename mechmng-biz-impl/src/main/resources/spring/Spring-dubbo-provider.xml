@@ -27,7 +27,11 @@
 	<!-- 服务消费端配置 loadbalance 负载均衡策略，可选值：random,roundrobin,leastactive，分别表示：随机，轮循，最少活跃调用-->
 	<dubbo:consumer timeout="5000" loadbalance="leastactive" />
 	
+	
 	<!-- 要对外暴露的接口 -->
+	
+	<dubbo:service interface="org.mechmng.facade.api.UserFacade" ref="userFacade" />
+	
 	<dubbo:service interface="org.mechmng.facade.api.DepartmentFacade" ref="departmentFacade" />
 	
 </beans>

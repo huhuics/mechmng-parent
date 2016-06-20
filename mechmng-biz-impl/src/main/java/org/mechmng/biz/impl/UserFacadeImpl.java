@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
  * @author HuHui
  * @version $Id: UserFacadeImpl.java, v 0.1 2016年5月22日 上午1:03:00 HuHui Exp $
  */
-@Service
+@Service("userFacade")
 @SuppressWarnings("unchecked")
 public class UserFacadeImpl implements UserFacade {
 
