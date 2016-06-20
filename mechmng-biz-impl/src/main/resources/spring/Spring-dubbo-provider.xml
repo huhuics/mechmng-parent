@@ -21,11 +21,8 @@
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" threads="${dubbo.protocol.threads}" />
 	
-	<!-- 服务端要暴露的服务接口,注解@com.alibaba.dubbo.config.annotation.Service -->
-	<!-- <dubbo:annotation package="org.mechmng.biz.impl" /> -->
-	
-	<!-- 服务消费端配置 loadbalance 负载均衡策略，可选值：random,roundrobin,leastactive，分别表示：随机，轮循，最少活跃调用-->
-	<dubbo:consumer timeout="5000" loadbalance="leastactive" />
+	<!-- 服务端配置 loadbalance 负载均衡策略-->
+	<dubbo:consumer timeout="${dubbo.consumer.timeout}" loadbalance="${dubbo.consumer.loadbalance}" />
 	
 	
 	<!-- 要对外暴露的接口 -->
