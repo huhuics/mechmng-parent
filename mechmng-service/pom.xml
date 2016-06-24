@@ -147,6 +147,7 @@
 	</build>
 
 	<profiles>
+		<!-- 开发环境 -->
 		<profile>
 			<id>dev</id>
 			<properties>
@@ -157,12 +158,14 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 		</profile>
+		<!-- 测试环境 -->
 		<profile>
 			<id>test</id>
 			<properties>
 				<active.profile>test</active.profile>
 			</properties>
 		</profile>
+		<!-- 生产环境 -->
 		<profile>
 			<id>product</id>
 			<properties>
