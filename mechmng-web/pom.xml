@@ -129,5 +129,44 @@
 				</configuration>
 			</plugin>
 		</plugins>
+
+		<filters>
+			<filter>src/main/resources/filters/${active.profile}-filters.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 	</build>
+
+	<profiles>
+		<!-- 开发环境 -->
+		<profile>
+			<id>dev</id>
+			<properties>
+				<active.profile>dev</active.profile>
+			</properties>
+			<!-- 把当前profile设置为默认profile -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<!-- 测试环境 -->
+		<profile>
+			<id>test</id>
+			<properties>
+				<active.profile>test</active.profile>
+			</properties>
+		</profile>
+		<!-- 生产环境 -->
+		<profile>
+			<id>product</id>
+			<properties>
+				<active.profile>product</active.profile>
+			</properties>
+		</profile>
+	</profiles>
+
 </project>
